@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+    /* ## Colors */
+
+    /* ### Primary */
+
+    --BLUE: hsl(223, 87%, 63%);
+
+    /* ### Secondary */
+
+    --PALE-BLUE: hsl(223, 100%, 88%);
+    --LIGHT-RED: hsl(354, 100%, 66%);
+
+    /* ### Neutral */
+
+    --GRAY: hsl(0, 0%, 59%);
+    --VERY-DARK-BLUE: hsl(209, 33%, 12%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    margin:3rem 2rem;
+    max-width: 32rem;
+    text-align: center;
+}
+
+.heading {
+    color: var(--GRAY);
+    font-weight: 200;
+    margin: 2rem 0 .5rem;
+    font-size: 2.5rem;
+}
+
+.soon {
+    font-weight: 600;
+    color: black;
+}
+
+.input-area {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 2rem 0;
+    column-gap: .5rem;
+}
+
+.input {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.error {
+    color: var(--LIGHT-RED);
+    align-self: flex-start;
+    margin: .4rem 1.7rem;
+    font-style: italic;
+    font-size: .8rem;
+}
+
+.input input {
+    padding: .8rem 1.5rem;
+    border: var(--PALE-BLUE) solid .8px;
+    border-radius: 1.5rem;
+}
+
+
+.input input::placeholder {
+    color: var(--PALE-BLUE);
+    font-size: .9rem;
+}
+
+button {
+    background-color: var(--BLUE);
+    color: white;
+    width: 100%;
+    border: none;
+    padding: .8rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    /* transition: all 0.3s; */
+}
+
+.hero-img {
+    max-width: 36rem;
+    margin: 2rem 0;
+}
+
+.hero-img img {
+    display: block;
+    width: 100%;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: .7rem;
+
+}
+
+.icons a {
+    border: solid .3px var(--PALE-BLUE);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    cursor: pointer;
+    color: var(--BLUE);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.icons a:hover {
+    background-color: var(--BLUE);
+    color: white;
+}
+
+.icons a:active, button:active {
+    opacity: 80%;
+}
+
+
+footer {
+    margin: 1.5rem 0 0;
+    color: var(--GRAY);
+    font-size: .7rem;
+}
+
+@media screen and (max-width:600px) {
+
+    .heading {
+        font-size: 1.6rem;
+        margin: 2.5rem 0 1rem;
+    }
+
+    .input-area {
+        grid-template-columns: 1fr;
+    }
+
+    .error {
+        align-self: center;
+
+    }
+
+    .hero-img {
+        margin:4rem 0 7rem;
+    }
+}
