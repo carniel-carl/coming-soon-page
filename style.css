@@ -39,8 +39,8 @@ ul {
 }
 
 .container {
-    margin:3rem 2rem;
-    max-width: 32rem;
+    /* margin:3rem 2rem; */
+    max-width: 37rem;
     text-align: center;
 }
 
@@ -148,6 +148,10 @@ footer {
 }
 
 @media screen and (max-width:600px) {
+
+    .container{
+        margin:3rem 2rem;
+    }
 
     .heading {
         font-size: 1.6rem;
